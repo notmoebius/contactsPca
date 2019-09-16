@@ -15,14 +15,14 @@
 
   <tbody>
     <% @contacts.each do |contact| %>
-      <tr>
+      <tr class="table-primary">
         <td><%= contact.email %></td>
         <td><%= contact.names %></td>
         <td><%= contact.mobile %></td>
         <td><%= contact.phone %></td>
-        <td><%= link_to 'Voir', contact %></td>
-        <td><%= link_to 'Modifier', edit_contact_path(contact) %></td>
-        <td><%= link_to 'Supprimer', contact, method: :delete, data: { confirm: 'Etes-vous sûr ?' } %></td>
+        <td class="btn btn-outline-primary"><%= link_to 'Voir', contact %></td>
+        <td class="btn btn-outline-primary"><%= link_to 'Modifier', edit_contact_path(contact) %></td>
+        <td class="btn btn-outline-primary"><%= link_to 'Supprimer', contact, method: :delete, data: { confirm: 'Etes-vous sûr ?' } %></td>
       </tr>
     <% end %>
   </tbody>
