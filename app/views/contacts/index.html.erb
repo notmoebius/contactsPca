@@ -6,9 +6,9 @@
   <thead>
     <tr>
       <th>Email</th>
-      <th>Names</th>
+      <th>Nom & Prénom</th>
       <th>Mobile</th>
-      <th>Phone</th>
+      <th>Fixe</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,9 +20,9 @@
         <td><%= contact.names %></td>
         <td><%= contact.mobile %></td>
         <td><%= contact.phone %></td>
-        <td><%= link_to 'Show', contact %></td>
-        <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
-        <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Voir', contact %></td>
+        <td><%= link_to 'Modifier', edit_contact_path(contact) %></td>
+        <td><%= link_to 'Supprimer', contact, method: :delete, data: { confirm: 'Etes-vous sûr ?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Contact', new_contact_path %>
+<%= link_to 'Créer un Contact', new_contact_path %>
