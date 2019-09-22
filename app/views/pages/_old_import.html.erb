@@ -1,0 +1,9 @@
+<h1>Import</h1>
+
+<%= form_for @contact, url: contacts_path do |f| %>
+   <div class="form-group">
+      <%= f.label :file, "Téléverser votre fichier CSV" %>
+      <%= f.file_field :file, class: 'form-control-file', required: true %>
+   </div>
+   <%= f.button :submit, "Envoyer CSV", class: 'btn btn-primary' %>
+<% end %>

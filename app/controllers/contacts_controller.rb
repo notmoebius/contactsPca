@@ -61,6 +61,15 @@ class ContactsController < ApplicationController
     end
   end
 
+  def import
+    if params[:file]
+      Contact.import(params[:file])
+      redirect_to(root_path, notice: "Contacts uploaded successfully")
+    else
+      redirect_to(root_path, notice: "Pboblème avec le fichier contact")
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_contact

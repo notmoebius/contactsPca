@@ -1,21 +1,14 @@
 class PagesController < ApplicationController
   def home
-    
-  end
-
-  def import
-    
+    @contact = Contact.all
   end
 
   def export
-    
   end
 
   def about
-
   end
 
   def memo
-    
   end
 end
