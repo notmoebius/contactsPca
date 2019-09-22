@@ -2,6 +2,15 @@
 
 <h1>Contacts</h1>
 
+<div>
+	<h4> Importer mon CSV ! </h4>
+		<%= form_tag import_contacts_path, multipart: true do %>
+		<%= file_field_tag :file %>
+		<%= submit_tag "Téléverser le CSV" %>
+		<% end %> 
+</div>
+<br>
+<h4> Contacts présents ! </h4>
 <table>
   <thead>
     <tr>
@@ -27,13 +36,5 @@
     <% end %>
   </tbody>
 </table>
-<div>
-	<h4> Import that data! </h4>
-		<%= form_tag import_contacts_path, multipart: true do %>
-		<%= file_field_tag :file %>
-		<%= submit_tag "Import CSV" %>
-		<% end %> 
-</div>
-<br>
 
 <%= link_to 'Créer un Contact', new_contact_path %>
